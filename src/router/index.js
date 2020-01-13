@@ -5,6 +5,12 @@ Vue.use(VueRouter);
 
 const routes = [
   {
+    path: '/',
+    name: 'home',
+    meta:{layout:'main'},
+    component: ()=> import('../views/ContactBase.vue')
+  },
+  {
     path: '/contact-base',
     name: 'contact-base',
     meta:{layout:'main'},

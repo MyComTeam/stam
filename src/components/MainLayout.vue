@@ -1,7 +1,11 @@
 <template>
     <div class="main-page">
         <Header-Element/>
-        <router-view/>
+        <div class="nav-and-content--wrapper">
+            <div id="content">
+                <router-view/>
+            </div>
+        </div>
         <FooterElement/>
     </div>
 </template>
@@ -14,12 +18,19 @@
         name: "MainLayout",
         components:{
             HeaderElement,
-            FooterElement
+            FooterElement,
         },
     }
 </script>
 
 <style lang="scss" scoped>
     .main-page{
+        .nav-and-content{
+            &--wrapper{
+                display: flex;
+                align-items : flex-start;
+                flex-wrap: nowrap;
+            }
+        }
     }
 </style>
